@@ -8,7 +8,6 @@ import (
 
 func main() {
 	router := gin.Default()
-
 	router.GET("/", rootHandler)
 	router.GET("/hello",helloHandler)
 	router.GET("/books/:id/:title", booksHandler)
