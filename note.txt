@@ -1,0 +1,107 @@
+// fmt.Printf("Db Connection Success")
+
+// db.AutoMigrate(book.Book{})
+
+// book := book.Book{}
+
+// book.Title = "Buku Kedua"
+// book.Price = 60000
+// book.Discount = 15
+// book.Rating = 4
+// book.Description = " Buku Kedua Saya "
+
+// err = db.Create(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error creating book record")
+// 	fmt.Println("==============")
+// }
+
+// var book book.Book
+
+// err = db.First(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Finding book record")
+// 	fmt.Println("==============")
+// }
+
+// fmt.Println("Title :", book.Title)
+// fmt.Println("book object  %v", book)
+
+// Finding All Data
+
+// var books []book.Book
+
+// err = db.Find(&books).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Finding book record")
+// 	fmt.Println("==============")
+// }
+
+// for _, b := range books {
+// 	fmt.Println("Title :", b.Title)
+// 	fmt.Println("book object  %v", b)
+// }
+
+// finding with condition
+
+// var books []book.Book
+
+// err = db.Where("Title = ?", "Buku Pertama").Find(&books).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Finding book record")
+// 	fmt.Println("==============")
+// }
+
+// for _, b := range books {
+// 	fmt.Println("Title :", b.Title)
+// 	fmt.Println("book object  %v", b)
+// }
+
+// update data
+
+// var book book.Book
+
+// err = db.Where("Title = ?", "Buku Pertama").Find(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Finding book record")
+// 	fmt.Println("==============")
+// }
+
+// book.Title = "First Book"
+// err = db.Save(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Update book record")
+// 	fmt.Println("==============")
+// }
+
+// Delete data
+
+// var book book.Book
+
+// err = db.Where("Title = ?", "Buku Kedua").First(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Finding book record")
+// 	fmt.Println("==============")
+// }
+
+// err = db.Delete(&book).Error
+
+// if err != nil {
+// 	fmt.Println("==============")
+// 	fmt.Println("Error Delete book record")
+// 	fmt.Println("==============")
+// }
